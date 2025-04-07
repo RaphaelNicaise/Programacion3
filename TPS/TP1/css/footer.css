@@ -1,0 +1,16 @@
+footer {
+    background-color: rgba(22, 21, 21, 0.842);
+    color: rgba(245, 239, 239, 0.747);
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    width: 100%;
+    position:static;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: rgba(22, 21, 21, 0.795);
+}
