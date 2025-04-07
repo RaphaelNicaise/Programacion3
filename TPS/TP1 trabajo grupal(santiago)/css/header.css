@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 
 header .navbar {
     background: linear-gradient(90deg, #000000, #060224, #1b2046);
