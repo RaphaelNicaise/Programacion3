@@ -14,3 +14,7 @@ footer {
 footer:hover {
     background-color: rgba(22, 21, 21, 0.795);
 }
+
+.active {
+    background-color: royalblue;
+}
