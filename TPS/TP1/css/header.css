@@ -1,0 +1,22 @@
+.navbar {
+    background-color: rgba(22, 21, 21, 0.842);
+    color: rgba(245, 239, 239, 0.747);
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-item {
+    display: inline;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 25px;
+    cursor:pointer;
+    transition: background-color ease 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: rgba(22, 21, 21, 0.795);
+    cursor:pointer;
+}
