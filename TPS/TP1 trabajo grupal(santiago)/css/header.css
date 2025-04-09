@@ -10,6 +10,8 @@ header .navbar {
     display: flex;
     list-style: none;
     align-items: center;
+    cursor:pointer
+    
 }
 
 .navbar .tittle {
@@ -30,6 +32,13 @@ header .navbar {
     font-size: 18px;
     margin-left: 140px;
     gap: 30px;
+    padding:10px
+}
+.navbar .list-item li:hover {
+    transition: 0.3s;
+    transform: scale(1.15);
+    color: rgb(0, 136, 255);
+    text-decoration: underline;
 }
 
 
