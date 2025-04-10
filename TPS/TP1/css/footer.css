@@ -11,3 +11,36 @@ footer {
     bottom: 0; 
     left: 0; 
 }
+footer .icon {
+    filter: invert(1);
+    opacity: 0.85;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+}
+
+footer .icon:hover {
+    opacity: 1;
+    filter: invert(1) drop-shadow(0 0 8px #00e5ff);
+    transform: scale(1.1);
+}
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #0088ff;
+    color: white;
+    border: 2px solid #0088ff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #00e5ff;
+    color: black;
+    border-color: #00e5ff;
+    transform: scale(1.1);
+}
