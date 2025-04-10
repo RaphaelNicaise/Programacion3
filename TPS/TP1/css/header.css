@@ -37,8 +37,7 @@ header .navbar {
 .navbar .list-item li:hover {
     transition: 0.3s;
     transform: scale(1.15);
-    color: rgb(0, 136, 255);
-    text-decoration: underline;
+    color: rgb(0, 119, 255);
 }
 
 

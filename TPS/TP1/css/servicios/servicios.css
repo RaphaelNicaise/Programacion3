@@ -50,10 +50,9 @@
         padding-right: 16px;   
         border-radius: 5px;
         cursor: pointer;
-        
     }
 
     .ver-mas:hover {
-        background-color:rgb(3, 62, 113);
-
-    }
+        background-color: rgb(3, 62, 113);
+        transition: background-color 0.5s ease;
+        }
