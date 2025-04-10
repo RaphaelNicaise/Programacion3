@@ -1,5 +1,5 @@
 main {
-    background-image: url(/assets/img/futurista.jpg);
+    background-image: url(../../assets/img/futurista.jpg);
     background-color: rgba(0, 0, 0, 0.4); 
     background-blend-mode: overlay;
     background-size: cover;
