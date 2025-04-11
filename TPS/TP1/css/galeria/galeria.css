@@ -13,6 +13,7 @@
     object-fit: cover;
     opacity: .7;
     transition: 1.2s ease;
+    
 }
 .container img:hover {
     width: 300px;
@@ -46,12 +47,12 @@ color: rgb(255, 255, 255);
     width: 100%;
     text-align: center;
     opacity: 0; 
-    transition: opacity 2s ease; 
+    
 }
 
 .content:hover p {
     opacity: 1;
-    transition: opacity 4s ease; 
+    transition: opacity 2.3s ease-in; 
 }
 
 
@@ -63,7 +64,7 @@ color: rgb(255, 255, 255);
     width: 0;
     height: 2px;
     background-color: rgb(17, 129, 154);
-    transition: width 2.2s ease;
+    transition: width 1.2s ease-in;
 }
 
 .content:hover p::after {
