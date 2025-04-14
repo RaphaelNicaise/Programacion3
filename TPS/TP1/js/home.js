@@ -106,7 +106,7 @@ function mostrarMensajeFinal() {
     const mensaje = document.createElement("div");
     mensaje.textContent = "Disfrute la experiencia";
     mensaje.style.position = "fixed";
-    mensaje.style.top = "35%";
+    mensaje.style.top = "36%";
     mensaje.style.left = "50%";
     mensaje.style.transform = "translate(-50%, -50%)";
     mensaje.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
