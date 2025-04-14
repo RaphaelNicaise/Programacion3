@@ -39,8 +39,8 @@ footer .icon:hover {
 }
 
 .button:hover {
-    background-color: #00e5ff;
-    color: black;
-    border-color: #00e5ff;
+    background-color: #006eff;
+    color: rgb(255, 255, 255);
+    border-color: #0055ff;
     transform: scale(1.1);
 }
