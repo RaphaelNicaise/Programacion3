@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px; 
+    }
+
+    .card {
+        flex: 0 0 35%;
+        scroll-snap-align: center;
+        margin-right: 20px;
+        height: 210px;
+    }
+    .card img {
+        height: 90px;
+        width: 70%;
+        border-radius: 8px;
+    }
+    .card h1 {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-right: 0;
+        margin-bottom: 5px;
+        border: solid rgb(0, 136, 255) 1px;
+    }
+    .card p {
+        font-size: 7px;
+        margin-bottom: 10px;
+    }
+
+    .ver-mas {
+        position: static;
+        transform: none;
+        margin-top: 0px;
+    }
+}

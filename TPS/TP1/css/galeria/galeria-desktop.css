@@ -1,6 +1,18 @@
-@media (min-width: 601px) {
-    #contacto {
-        width: 500px;
+@media (min-width: 769px) {
+    .container {
+        height: 500px;
+    }
+
+    .container img {
+        width: 250px;
+        height: 380px;
+    }
+
+    .content {
+        width: 130px;
+    }
+
+    .explicacion {
+        width: 25%;
     }
 }
-
