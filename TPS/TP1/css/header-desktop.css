@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .navbar .tittle {
+        font-size: 25px;
+        color: rgb(0, 136, 255);
+        font-weight: bold;
+        margin-left: 80px;
+    }
+
+    .navbar .list-item {
+        display: flex;
+        font-size: 18px;
+        margin-left: 140px;
+        gap: 30px;
+        padding: 10px;
+    }
+}

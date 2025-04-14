@@ -1,0 +1,18 @@
+@media (max-width: 767px) {
+    main {
+        height: 540px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Presentacion {
+        height: auto;
+        margin-top: 100px;
+        font-size: 20px;
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+}
