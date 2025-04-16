@@ -1,3 +1,5 @@
+/* Estilos base comunes */
+
 main {
     background-image: url(../../assets/img/futurista.jpg);
     background-color: rgba(0, 0, 0, 0.4); 
@@ -14,8 +16,3 @@ main {
     background-color: rgba(0, 0, 0, 0.4);
     position: relative;
 }
-
-
-
-
-

@@ -1,4 +1,4 @@
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1365px) {
     .container {
         height: 500px;
     }
