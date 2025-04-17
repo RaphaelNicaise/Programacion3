@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(221, 231, 240);
+}
+
+.resaltado {
+    background-color: yellow;
+    color: black;
+}
+
+.oculto {
+    display: none;
+}
