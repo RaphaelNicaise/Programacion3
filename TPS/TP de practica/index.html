@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+background-color: #b5b5b5;
+}
+
+    </style>
+</head>
+<body style="color: aliceblue;">
+<!--header y navbar-->
+<header>
+    <nav>
+        
+    </nav>
+</header>
+
+
+
+<!--comienza el main-->
+<main>
+    
+    <!--section de recetas-->
+    <section class ="recetas">
+        <!--articulo empanadas-->
+        <article class ="empanadas">
+            
+            <h1>Empanadas de carne y papa</h1>
+            <p>aprende a preparar las mejores empanadas</p>
+            <img src="https://www.defer.cl/img/p/1/6/3/163-thickbox_default.jpg" alt="Empanadas" style="width: 500px; height: 400px;">
+            <h2>ingredientes</h2>
+            <ul>
+                <!--ul list-->
+                <li> <a href="http://www.google.com">cebolla</a> una unidad</li>
+                <li> <a href="http://www.google.com">papa</a> dos unidades</li>
+                <li> <a href="http://www.google.com">queso</a> medio quilo</li>
+                <li> <a href="http://www.google.com">aceite</a> 1 litro</li>
+                
+            </ul>
+            
+        </article>
+    </section>
+
+
+    <section class="formulario">
+
+            <h1>contacto</h1>
+            <form action="">
+                <div>
+                    <label for="nombre">nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div><br>
+
+                <div>
+                    <input type="radio" id="consulta" name="tipo" value="consulta">
+                    <label for="consulta">consulta</label><br>
+
+                    <input type="radio" id="sugerencia" name="tipo" value="sugerencia">
+                    <label for="sugerencia">sugerencia</label><br>
+
+                    <input type="radio" id="reclamo" name="tipo" value="reclamo">
+                    <label for="reclamo">reclamo</label><br>
+
+                </div>
+                <br>
+                <div>
+                    <label for="asunto">asunto:</label><br>
+                    <select id="asunto" name="asunto" required><br>
+                        <option value="receta">receta</option><br>
+                        <option value="ingredientes">ingredientes</option><br>
+                        <option value="preparacion">preparacion</option><br>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+                    <label for="newsletter">deseo recibir el newsletter</label><br>
+                </div>
+                
+                <div>
+                    <label for="mensaje">mensaje:</label><BR>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="enviar">
+                </div>
+
+
+
+            </form>
+            
+            
+        
+    </section>
+
+</main>
+
+<footer>
+<!--footer-->
+</footer>
+
+
+</body>
+</html>
