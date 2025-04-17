@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #aaa, #f0f0f0 );
+    background-attachment: fixed;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    background: #aba;
+    width: 30%;
+    border: 0.2px solid black;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgb(62, 61, 61);
+}
+
+#boton-agregar {
+    border-radius: inherit;
+    padding: 2px;
+    width: 60px;
+    border: solid 0.2px rgb(35, 140, 24);
+    background-color: rgb(192, 213, 192);
+    letter-spacing: 0.5px;
+
+}
+
+#boton-agregar:hover {
+    background-color: rgb(135, 214, 135);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: solid 0.2px white;
+    transition: background-color 0.2s;
+}
+
+
+#input-agregar {
+    border-radius: inherit;
+    padding: 5px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #aba;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#input-agregar:focus {
+    outline: none;
+}
+
+#input-agregar::placeholder {
+    color:rgb(6, 63, 6);
+    letter-spacing: 2px;
+}
+
+[id^="botonEliminar"] {
+    margin: 2px;
+    border-radius: 3px;
+    padding: 2px;
+    width: 60px;
+    border: solid 0.2px rgb(167, 32, 32);
+    background-color: rgb(246, 193, 193);
+}
+
+[id^="botonEliminar"]:hover {
+    background-color: rgb(214, 135, 135);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: solid 0.2px white;
+    transition: background-color 0.2s;
+}
+
+li {
+    color:rgb(6, 63, 6);
+    font-weight: bold;
+}
