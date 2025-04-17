@@ -10,7 +10,7 @@
 
     .card {
         width: 280px;
-        background-color: #ffffff;
+        background: linear-gradient(to bottom, #ffffff 86%, #7184f3);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

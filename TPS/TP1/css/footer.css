@@ -11,17 +11,27 @@ footer {
 }
 
 footer .icon {
-    filter: invert(1);
+/*    filter: invert(1); */
+    border: solid 1px #0088ff;
+    padding: 3px;
     opacity: 0.85;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 35px;
     transition: all 0.3s ease;
+
 }
 
 footer .icon:hover {
     opacity: 1;
-    filter: invert(1) drop-shadow(0 0 8px #00e5ff);
-    transform: scale(1.1);
+    filter: drop-shadow(0 0 1px #0088ff);
+    transform: scale(1);
+}
+
+footer .footer-icons {
+    display: inline-block;
+    margin-left: 12px;
+    margin-top: 11px;
+    border-bottom: solid 0.5px #0088ff;
 }
 
 .button {
@@ -42,5 +52,11 @@ footer .icon:hover {
     background-color: #006eff;
     color: rgb(255, 255, 255);
     border-color: #0055ff;
-    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.footer-contacto {
+    display:inline-block;
+    margin-bottom: 0.4px;
+    border-bottom: solid 0.5px #0088ff;
 }
