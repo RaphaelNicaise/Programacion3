@@ -9,14 +9,15 @@ formulario.addEventListener("submit", (event) => {
 
 btnEnviar.addEventListener("click", () => {
     const contenidoInput = input.value
-    const li = document.createElement("li")
-    li.innerText = contenidoInput
-    ul.appendChild(li)
-    
-    li.addEventListener("click", () => {
-        li.classList.add("completado")
-    })
-
+    if (isNaN(contenidoInput) && contenidoInput != "") {
+        const li = document.createElement("li")
+        li.innerText = contenidoInput
+        ul.appendChild(li)
+        
+        li.addEventListener("click", () => {
+            li.classList.add("completado")
+        })
+    }
 })
 
 
