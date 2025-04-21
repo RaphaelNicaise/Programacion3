@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | MentalHealth</title>
+
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main-desktop.css">
+    <link rel="stylesheet" href="../css/main-laptop.css">
+
+
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header-mobile.css">
+    <link rel="stylesheet" href="../css/header-laptop.css">
+
+
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/footer-mobile.css">
+    <link rel="stylesheet" href="../css/footer-laptop.css">
+
+
     <link rel="stylesheet" href="../css/home/home.css">
+    <link rel="stylesheet" href="../css/home/home-mobile.css">
+    <link rel="stylesheet" href="../css/home/home-laptop.css">
+    <link rel="stylesheet" href="../css/home/home-desktop.css">
+
     <link rel="icon" href="../assets/icon/logo.ico" type="image/x-icon">
 </head>
+
 <body>
 
 
@@ -23,7 +42,7 @@
             </a>
             <div>
                 <ul class="list-item">
-                    <li id ="Home"><a href="index.html">Home</a></li>
+                    <li id="Home"><a href="index.html">Home</a></li>
                     <li id="Servicios"><a href="servicios.html">Servicios</a></li>
                     <li id="Galeria"><a href="galeria.html">Experiencias</a></li>
                     <li id="Contactanos"><a href="contacto.html">Contactanos</a></li>
@@ -37,11 +56,51 @@
 
 
     <main>
+        <section style="position: absolute; top: 0; left: 0; width: 100%; z-index: 1000;">
+            <button id="button-tutorial" style="
+        position: fixed;
+        margin-top: 140px ;  
+        margin-left: -120px;
+        padding: 10px 20px;
+        background-color: #0088ffb3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1001;">
+        Presione si desea iniciar Tutorial
+    </button>
+
+            <div id="guia" style="
+        font-family: 'Arial';
+        position: fixed;
+        background: rgba(255, 255, 255, 0.774);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 8px;
+        display: none;
+        z-index: 999;
+        font-size: 12px;
+        top: 10px;
+        max-width: 240px;"
+        >
+        <p id="guia-texto" style="margin-bottom: 8px;"></p>
+        <div style="display: flex; justify-content: space-between;"></div>
+        <button id="btn-prev" style="margin-right: 5px;">◀ Atrás</button>
+        <button id="btn-next">Siguiente ▶</button>
+    </div>
+</div>
+
+        </section>
         <section id="Presentacion">
             <h1>MentalHealth Project.</h1>
-            <p>Somos un centro de salud mental que brinda apoyo psicológico con ayuda de la inteligencia artificial.
-                Buscamos ayudarte con tu cuidado emocional y mental combinando la psicología con herramientas de IA para mejorar el bienestar mental.</p>
+            <p>
+                Somos un centro de salud mental que brinda apoyo psicológico con ayuda de la inteligencia artificial.
+                Buscamos ayudarte con tu cuidado emocional y mental combinando la psicología con herramientas de IA para
+                mejorar el bienestar mental.
+            </p>
         </section>
+
     </main>
 
 
@@ -49,7 +108,7 @@
 
     <footer>
         <p>MentalHealth Project. All rights reserved.</p>
-        <a href="contacto.html">Contactanos</a>
+        <a href="contacto.html" class="button">Contactanos</a>
         <a href="https://github.com/RaphaelNicaise/Programacion3/tree/main/TPS/TP1" target="_blank">
             <img src="../assets/icon/github-brands.svg" class="icon" alt="GitHub" width="30">
         </a>
@@ -57,8 +116,7 @@
             <img src="../assets/icon/linkedin-brands.svg" class="icon" alt="LinkedIn" width="30">
         </a>
     </footer>
-
-
-
+    <script src="../js/home.js"></script>
 </body>
+
 </html>

@@ -1,50 +1,21 @@
-// Función para crear y mostrar un mensaje flotante
-function mostrarMensajeFlotante(texto, opciones = {}) {
-    const {
-        duracion = 5000, // Duración del mensaje en milisegundos
-        posicion = { bottom: "500px", right: "300px" }, // Posición del mensaje
-        estilosAdicionales = {}, // Estilos adicionales opcionales
-    } = opciones;
-
-    // Crear el div del mensaje
-    const mensaje = document.createElement("div");
-    mensaje.id = "mensaje-flotante";
-    mensaje.textContent = texto;
-
-    // Estilos base
-    Object.assign(mensaje.style, {
-        position: "fixed",
-        backgroundColor: "#333",
-        color: "#fff",
-        padding: "15px 20px",
-        borderRadius: "10px",
-        boxShadow: "0 0 10px rgba(0,0,0,0.3)",
-        fontFamily: "sans-serif",
-        zIndex: "1000",
-        opacity: "0",
-        transition: "opacity 0.5s ease-in-out",
-        ...posicion, // Aplicar posición
-        ...estilosAdicionales, // Aplicar estilos adicionales
-    });
-
-    // Agregar el mensaje al body
+setTimeout(() => {
+    const mensaje = document.createElement('p');
+    mensaje.textContent = '¡Este formulario tiene funcionalidad! sera enviado a mi mail.';
+    mensaje.style.position = 'fixed';
+    mensaje.style.bottom = '400px';
+    mensaje.style.right = '300px';
+    mensaje.style.backgroundColor = '#f0f8ff'; // Color más claro y amigable
+    mensaje.style.color = '#333'; // Texto oscuro para mejor contraste
+    mensaje.style.padding = '15px';
+    mensaje.style.borderRadius = '10px';
+    mensaje.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Sombra para un efecto más moderno
+    mensaje.style.fontFamily = 'Arial, sans-serif';
+    mensaje.style.fontSize = '18px';
+    mensaje.style.zIndex = '1000';
     document.body.appendChild(mensaje);
 
-    // Forzar render para que funcione la transición
+    // Opcional: Eliminar el mensaje después de unos segundos
     setTimeout(() => {
-        mensaje.style.opacity = "1";
-    }, 50);
-
-    // Ocultar después de la duración especificada
-    setTimeout(() => {
-        mensaje.style.opacity = "0";
-        setTimeout(() => {
-            mensaje.remove();
-        }, 500); // Esperar que termine la transición antes de eliminarlo
-    }, duracion);
-}
-
-// Mostrar el mensaje después de 2 segundos
-setTimeout(() => {
-    mostrarMensajeFlotante("📝 El formulario tiene funcionalidad y será enviado a mi mail.");
-}, 1500);
+        mensaje.remove();
+    }, 4000);
+}, 1000);

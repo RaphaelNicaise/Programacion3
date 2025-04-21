@@ -1,0 +1,17 @@
+@media (min-width: 769px) and (max-width: 1365px) {
+    .container {
+        flex-wrap: wrap;
+        height: 460px;
+    }
+
+    .card {
+        width: 280px;
+    }
+
+    .ver-mas {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

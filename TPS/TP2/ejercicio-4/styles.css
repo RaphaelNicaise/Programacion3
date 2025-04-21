@@ -1,0 +1,9 @@
+.completado {
+    color: green;
+    text-decoration: underline;
+}
+
+ul li:hover {
+    background-color: rgb(167, 224, 140);
+    cursor:pointer;
+}

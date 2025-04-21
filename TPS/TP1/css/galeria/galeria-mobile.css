@@ -1,15 +1,16 @@
+@media (max-width: 768px) {
 .container {
     background-color: black;
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 550px;
     overflow-x: auto;
 }
 
 .container img {
     height: 380px;
     margin-top: 5px;
-    width: 250px;
+    width: 50px;
     flex-grow: 1;
     object-fit: cover;
     opacity: 0.7;
@@ -17,13 +18,13 @@
 }
 
 .container img:hover {
-    width: 300px;
+    width: 170px;
     opacity: 1;
     filter: contrast(120%);
 }
 
 .content {
-    width: 130px;
+    width: 40px;
     position: relative;
     transition: all 0.8s ease;
     padding: 0 10px;
@@ -32,7 +33,7 @@
 }
 
 .content:hover {
-    width: 300px;
+    width: 200px;
     opacity: 1;
     text-align: center;
     padding: 0 10px;
@@ -40,7 +41,7 @@
 
 .content p {
     color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 10px;
     position: relative;
     margin: 0;
     padding-bottom: 10px;
@@ -70,7 +71,7 @@
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
     text-align: center;
     border: 1px solid rgb(17, 129, 154);
@@ -78,13 +79,13 @@ h2 {
 }
 
 .explicacion {
-    width: 25%;
+    width: 20%;
     margin: 20px auto;
 }
 
 .explicacion h1 {
     color: white;
-    font-size: 28px;
+    font-size: 12px;
     border-bottom: solid 1px rgb(17, 129, 154);
     margin-bottom: 20px;
     text-align: center;
@@ -92,8 +93,9 @@ h2 {
 
 .explicacion p {
     color: white;
-    font-size: 16px;
-    text-align: justify;
+    font-size: 12px;
+    text-align: center;
     margin-bottom: 20px;
-    line-height: 1.6;
+    line-height: 1.2;
+}
 }

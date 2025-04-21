@@ -1,27 +1,18 @@
+/* Estilos base comunes */
+
 main {
     background-image: url(../../assets/img/futurista.jpg);
     background-color: rgba(0, 0, 0, 0.4); 
     background-blend-mode: overlay;
     background-size: cover;
-    height: 100%;
     width: 100%;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
 
 #Presentacion {
-    height: 200px; 
     align-items: center;
-    margin-top: 245px;
-    font-size: 32px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-    background-color: rgba(0, 0, 0, 0.4); 
-    margin-bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
 }
-
-
-
-
-
-
-

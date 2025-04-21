@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .navbar .tittle {
+        font-size: 15px;
+        color: rgb(0, 136, 255);
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .navbar img{
+        width: 45px;
+        height: 30px;
+        
+    }
+
+    .navbar .list-item {
+        display: flex;
+        flex-direction: row;
+        font-size: 11px;
+        gap: 14px;
+        padding: 10px;
+        margin-left: 30px;
+    }
+}
