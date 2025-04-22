@@ -1,5 +1,5 @@
 footer {
-    background-color: rgb(0, 0, 0); 
+    background: linear-gradient(90deg, #000000, #060224, #1b2046);
     color: rgb(0, 136, 255); 
     width: 100%; 
     text-align: center; 
@@ -11,7 +11,6 @@ footer {
 }
 
 footer .icon {
-/*    filter: invert(1); */
     border: solid 1px #0088ff;
     padding: 3px;
     opacity: 0.85;

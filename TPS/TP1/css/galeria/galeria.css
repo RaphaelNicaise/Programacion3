@@ -1,4 +1,15 @@
+body {
+    background-image: url(../../assets/img/futurista.jpg);
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: overlay;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
 .container {
+    margin-top: 110px;
     background-color: black;
     display: flex;
     width: 100%;

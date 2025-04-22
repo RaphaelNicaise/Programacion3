@@ -1,9 +1,11 @@
 #contacto {
     margin: 0 auto;
+    margin-top: 20px;
     background-color: #f9f9ff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     padding: 30px;
+    border-bottom: 10px solid #0767c0;
 }
 
 #contacto h2 {
