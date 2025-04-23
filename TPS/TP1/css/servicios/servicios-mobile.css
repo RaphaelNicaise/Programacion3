@@ -1,16 +1,32 @@
 @media (max-width: 768px) {
+
+    main{
+        margin: 0;
+        padding: 0;
+        gap: 0px;
+    }
     .container {
         display: flex;
         flex-wrap: wrap;
-        height: 500px; 
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin-top: 34px;
+        margin-bottom: 70px;
     }
 
     .card {
-        flex: 0 0 35%;
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 10px;
         scroll-snap-align: center;
-        margin-right: 20px;
-        height: 210px;
-    }
+        height: 100%; /*210px antes*/
+        max-width: 130px;
+        height: 250px;
+        max-height: 250px;
+        border-bottom: 0;
+}
+
     .card img {
         height: 90px;
         width: 70%;
@@ -29,8 +45,10 @@
     }
 
     .ver-mas {
-        position: static;
-        transform: none;
-        margin-top: 0px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
     }
 }
