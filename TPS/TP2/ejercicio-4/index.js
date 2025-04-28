@@ -2,7 +2,6 @@
 const formulario = document.getElementById("formulario");
 const listaTareas = document.getElementById("lista-tareas");
 const btnFormulario = document.getElementById("boton-formulario");
-console.log(btnFormulario)
 
 // Agregar tarea cuando se envíe el formulario
 btnFormulario.addEventListener("click", (event) => {
