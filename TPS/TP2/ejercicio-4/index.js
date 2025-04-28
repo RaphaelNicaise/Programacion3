@@ -1,9 +1,11 @@
 // Obtener los elementos relevantes
 const formulario = document.getElementById("formulario");
 const listaTareas = document.getElementById("lista-tareas");
+const btnFormulario = document.getElementById("boton-formulario");
+console.log(btnFormulario)
 
 // Agregar tarea cuando se envíe el formulario
-formulario.addEventListener("submit", function(event) {
+btnFormulario.addEventListener("click", (event) => {
     event.preventDefault();  // Prevenir la acción por defecto (recargar la página)
     const tarea = document.getElementById("text-area-tareas").value;  // Obtener el texto de la tarea
     if (tarea) {  // Si hay texto en el campo
