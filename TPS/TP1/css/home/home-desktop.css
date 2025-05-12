@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    main {
+        height: 100%;
+    }
+
+    #Presentacion {
+        height: 200px; 
+        margin-top: 245px;
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+}
+
+body {
+    height: 1000px;
+}

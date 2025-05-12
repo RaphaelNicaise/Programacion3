@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
     main {
-        height: 550px;
+        height: 100vh; /* 550px antes */
         background-size: cover;
         background-position: center;
         display: flex;
