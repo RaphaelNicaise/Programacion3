@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>validacion</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <form id="formulario">
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre"  placeholder="escribi tu nombre...">
-        </div>
 
-        <div>
-            <label for="email">email</label>    
-            <input type="email" id="email"  placeholder="escribi tu email...">
-        </div>
-        <div>
-            <label for="edad">edad</label>
-            <input type="number" id="edad"  placeholder="escribi tu edad...">
-        </div>
-        <div>
-            <button type="submit">enviar</button>
-        </div>
+    <form action="" id="formulario">
+        
+        <label for="nombre">nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <p id="errorNombre"></p>
+
+        <label for="email">email</label>
+        <input type="text" id="email" placeholder="Email">
+        <p id="errorEmail"></p>
+
+        <label for="edad">edad</label>
+        <input type="text" id="edad" placeholder="Edad">
+        <p id="errorEdad"></p>
+
+        <button id="botonEnviar">Enviar</button>
+        
+
     </form>
-
+    
     <script src="index.js"></script>
-
 </body>
 </html>
