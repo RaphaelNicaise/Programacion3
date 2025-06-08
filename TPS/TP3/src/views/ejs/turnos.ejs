@@ -1,0 +1,36 @@
+<%- include ('../partials/head'); %>
+
+<%- include ('../partials/header'); %>
+
+            <body>
+                <h4 class="h4-pacientes-table">LISTADO DE TURNOS</h4>
+<table>
+
+    <thead>
+        <tr>
+            <th class="header-table">idTurno</th>
+            <th class="header-table">fecha</th>
+            <th class="header-table">hora</th>
+            <th class="header-table">motivo</th>
+            <th class="header-table">pacienteID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% turnos.forEach(t => { %>
+            <tr>
+                <td><%= t.id %></td>
+                <td><%= t.fecha %></td>
+                <td><%= t.hora %></td>
+                <td><%= t.motivo %></td>
+                <td><%= t.pacienteId %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+                <p>
+                    <% if (error) { %>
+                        <%= error %>
+                            <% } %>
+                </p>
+
+<%- include ('../partials/footer'); %>

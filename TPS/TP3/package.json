@@ -1,30 +1,39 @@
 {
-  "name": "practico3progra3",
+  "name": "programacion3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santozzi/practico3progra3.git"
+    "url": "git+https://github.com/raphaelnicaise/programacion3"
   },
   "keywords": [],
-  "author": "",
+  "author": "GRUPO 14",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/santozzi/practico3progra3/issues"
   },
-  "homepage": "https://github.com/santozzi/practico3progra3#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
     "pug": "^3.0.3",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
+  },
+  "description": ""
 }

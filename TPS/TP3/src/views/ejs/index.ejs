@@ -1,30 +1,100 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <title><%= title %></title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <h1><%= message %></h1>
-    <h2>Estoy en EJS</h2>
-    <p>Bienvenido a nuestra aplicación</p>
+<%- include('../partials/head'); %>
 
-    <% if (showFeatures) { %>
-        <h2>Características principales:</h2>
-        <ul>
-            <% features.forEach(function(feature) { %>
-                <li><%= feature %></li>
-            <% }); %>
-        </ul>
-    <% } else { %>
-        <p>No hay características disponibles.</p>
-    <% } %>
+<%- include ('../partials/header-login'); %>
 
-    <%# Esto es un comentario (no se renderiza en el HTML) %>
-    
-    <footer>
-        <p>© <%= new Date().getFullYear() %> Mi Aplicación</p>
-    </footer>
-</body>
-</html>
+<div class="funciones">
+
+    <div class="register-container">
+        <h3>Ver Turnos</h3>
+        <form action="/turnos" method="GET">
+            <button type="submit" class="register-btn">Ver turnos</button>
+        </form>
+    </div>
+
+    <div class="register-container">
+    <h3>Registrar Turno</h3>
+    <form action="http://localhost:3000/" method="POST">
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" name="hora" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pacienteId">ID del Paciente</label>
+            <input type="number" name="pacienteId" required>
+        </div>
+        <div class="form-group">
+            <label for="motivo">Motivo</label>
+            <textarea id="motivo" name="motivo" rows="2" style="width:90%;" required></textarea>
+        </div>
+
+
+        <button type="submit" class="register-btn">Registrar turno</button>
+    </form>
+</div>
+
+    <div class="register-container">
+        <h3>Dar de baja Turno</h3>
+        <form action="/turnos/eliminar" method="POST">
+            <div class="form-group">
+                <label for="idTurno">ID del turno</label>
+                <input type="number" name="idTurno" required>
+            </div>
+            <button type="submit" class="register-btn">Eliminar </button>
+        </form>
+    </div>
+
+    <div class="register-container">
+        <h3>Ver Pacientes</h3>
+        <form action="http://localhost:3000/pacientes" method="GET">
+            <button type="submit" class="register-btn">Ver pacientes</button>
+        </form>
+    </div>
+
+    <div class="register-container">
+    <h3>Registrar Paciente</h3>
+    <form action="http://localhost:3000/" method="POST">
+        <div class="form-group">
+            <label for="dniPaciente">DNI del paciente</label>
+            <input type="text" name="dniPaciente" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nombrePaciente">Nombre del paciente</label>
+            <input type="text" name="nombrePaciente" required>
+        </div>
+
+        <div class="form-group">
+            <label for="apellidoPaciente">Apellido del paciente</label>
+            <input type="text" name="apellidoPaciente" required>
+        </div>
+
+        <div class="form-group">
+            <label for="emailPaciente">Email del paciente</label>
+            <input type="email" name="emailPaciente" required>
+        </div>
+
+        <button type="submit" class="register-btn">Registrar paciente</button>
+    </form>
+</div>
+
+    <div class="register-container">
+        <h3>Dar de Baja Paciente</h3>
+        <form action="/pacientes/eliminar" method="POST">
+            <div class="form-group">
+                <label for="idPacienteEliminar">ID del paciente</label>
+                <input type="number" name="idPacienteEliminar" id="idPacienteEliminar" required>
+            </div>
+            <button type="submit" class="register-btn">Eliminar</button>
+        </form>
+    </div>
+
+</div>
+
+<%- include('../partials/footer'); %>
+

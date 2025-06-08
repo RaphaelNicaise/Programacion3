@@ -1,0 +1,13 @@
+<%- include ('../partials/head'); %>
+
+<%- include ('../partials/header'); %>
+
+    <div class="register-container">
+        <h3 style="text-align: center"> ERROR </h3>
+        <p style="text-align: center"><%= error %></p>
+        <form action="/pacientes" method="GET">
+            <button type="submit" class="register-btn">Ir a la tabla de pacientes</button>
+        </form>
+    </div>
+
+<%- include ('../partials/footer'); %>

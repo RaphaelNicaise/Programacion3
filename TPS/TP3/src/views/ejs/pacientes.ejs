@@ -1,0 +1,38 @@
+<%- include ('../partials/head'); %>
+
+<%- include ('../partials/header'); %>
+
+            <body>
+                <h4 class="h4-pacientes-table">LISTADO DE PACIENTES</h4>
+<table>
+
+    <thead>
+        <tr>
+            <th class="header-table">id</th>
+            <th class="header-table">dni</th>
+            <th class="header-table">nombre</th>
+            <th class="header-table">apellido</th>
+            <th class="header-table">email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pacientes.forEach(p => { %>
+            <tr>
+                <td><%= p.id %></td>
+                <td><%= p.dni %></td>
+                <td><%= p.nombre %></td>
+                <td><%= p.apellido %></td>
+                <td><%= p.email %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+
+                <p>
+                    <% if (error) { %>
+                        <%= error %>
+                            <% } %>
+                </p>
+
+<%- include ('../partials/footer'); %>
