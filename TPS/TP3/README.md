@@ -1,7 +1,30 @@
 # GRUPO 14
 
+## 👥 INTEGRANTES 
+#### - Cordano, Nicolas
+#### - Grgurich, Abner
+#### - Nicaise, Raphael
+#### - Segal, Santiago
 
-## ENDPOINTS PARA PACIENTES
+## 🛠️ INSTALACIÓN DEL PROYECTO
+
+### Pasos para correr el proyecto
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone https://github.com/RaphaelNicaise/Programacion3.git
+2. **Instalar las dependencias**
+    ```
+    npm install
+3. **Creacion de archivo .env**
+    Para evitar problemas se debe cambiar el archivo .env.template a .env, o crear un archivo .env con los datos que se encuentran .env.template
+4. **Inicializar el proyecto**
+    ```bash
+    npm run dev
+
+📌Recordatorio: La contraseña en el archivo .env debe ser mayor a 8 carácteres
+## 📋 ENDPOINTS PARA PACIENTES
 
 ### `GET /api/v1/pacientes`
 ###### Devuelve un listado con todos los pacientes.
@@ -37,5 +60,4 @@
 ### `POST /api/v1/turnos`
 ###### Crea un nuevo turno. Requiere `id`, `fecha`. `hora`, `motivo` y el `ID del paciente`en el body del JSON
 ![post-turno](https://raw.githubusercontent.com/RaphaelNicaise/Programacion3/main/TPS/TP3/images/turnos/post-turno.jpg)
-
 
