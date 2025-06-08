@@ -17,7 +17,7 @@
 2. **Instalar las dependencias**
     ```
     npm install
-3. **Creacion de archivo .env**
+3. **Creacion de archivo .env**  
     Para evitar problemas se debe cambiar el archivo .env.template a .env, o crear un archivo .env con los datos que se encuentran .env.template
 4. **Inicializar el proyecto**
     ```bash
