@@ -2,7 +2,6 @@ const pacientesModel = require('../../models/sqlite/paciente.model.js');
 const Config = require('../../config/config.js');
 const jwt = require('jsonwebtoken');
 const { pacienteSchema } = require('../../schemas/paciente.schema.js')
-const { LoginSchema } = require('../../schemas/login.schema.js')
 
 class PacientesController {
 
@@ -98,7 +97,6 @@ class PacientesController {
       res.status(400).json({ error: 'Hubo un error al actualizar el paciente' });
     }
   }
-
 }
 
 module.exports = new PacientesController();

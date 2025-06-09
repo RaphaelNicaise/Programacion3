@@ -1,22 +1,30 @@
-
+const Config = require('../../config/config.js');
 const jwt = require('jsonwebtoken');
-
-exports.login = (req, res) => {
+const { LoginSchema } = require('../../schemas/login.schema.js')
+class LoginController {
+      async login(req, res) {
     const { password } = req.body;
 
+      const { error } = LoginSchema.login.validate(req.body);
+      if (error) {
+        return res.status(400).json({ error: error.details[0].message });
+      }
+
     if (!password) {
-        return res.status(400).json({ error: 'La contraseña es requerida' });
+      return res.status(400).json({ error: 'La contraseña es obligatoria' });
+    }
+    if (password !== Config.loginPassword) {
+      return res.status(400).json({ error: 'Contraseña incorrecta' });
     }
 
-    if (password === process.env.LOGIN_PASSWORD) {
-        const token = jwt.sign(
-            { user: 'admin' },
-            process.env.SECRET_WORD,
-            { expiresIn: process.env.EXPIRES_IN }
-        );
+    const token = jwt.sign(
+      { role: 'admin' },
+      Config.secretWord,
+      { expiresIn: Config.expiresIn }
+    );
 
-        return res.status(200).json({ token });
-    } else {
-        return res.status(401).json({ error: 'Contraseña incorrecta' });
-    }
-};
+    res.status(200).json({ token });
+  }
+}
+
+module.exports = new LoginController()

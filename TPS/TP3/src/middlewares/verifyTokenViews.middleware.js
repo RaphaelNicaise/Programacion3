@@ -5,12 +5,12 @@ const verifyTokenViewsMiddleware = (req, res, next) => {
   const token = req.session.token;
   
   if (!token) {
-    return res.redirect("/login"); // o a donde tengas el formulario de login
+    return res.redirect("/login");
   }
 
   try {
     const decoded = jwt.verify(token, Config.secretWord);
-    req.user = decoded; // opcional, por si querés acceder a `req.user` en tu controlador
+    req.user = decoded;
     next();
   } catch (error) {
     return res.redirect("/login");
