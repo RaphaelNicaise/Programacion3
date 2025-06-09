@@ -27,7 +27,9 @@
 ## 📋 ENDPOINT PARA OBTENER EL TOKEN Y CONSEGUIR EL AUTH
 
 ### `GET /api/v1/login`
-
+![login-obtener-token](https://raw.githubusercontent.com/RaphaelNicaise/Programacion3/main/TPS/TP3/images/login/post-login-obtener-token.jpg)
+Y se coloca en el header, en la parte de Authorization (se usa de ejemplo el GET en api/v1/login)
+![login-obtener-token](https://raw.githubusercontent.com/RaphaelNicaise/Programacion3/main/TPS/TP3/images/login/insertar-token-obtenido.jpg)
 ## 📋 ENDPOINTS PARA PACIENTES
 
 ### `GET /api/v1/pacientes`
