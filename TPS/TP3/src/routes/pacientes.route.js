@@ -5,9 +5,7 @@ const {pacienteSchema} = require('../schemas/paciente.schema.js')
 const {pacientes} = require('../controllers/home/home.controller.js')
 const rutaPacientes = Router();
 
-//para poner la contraseña
- rutaPacientes.post('/login', pacientesController.login)
-//rutaPacientes.post('/login', pacienteSchema.login)
+
 //para obtener todos los pacientes
 rutaPacientes.get('/',verifyTokenMiddleware, pacientesController.getPacientes);
 //agregamos un paciente

@@ -24,6 +24,10 @@
     npm run dev
 
 📌Recordatorio: La contraseña en el archivo .env debe ser mayor a 8 carácteres
+## 📋 ENDPOINT PARA OBTENER EL TOKEN Y CONSEGUIR EL AUTH
+
+### `GET /api/v1/login`
+
 ## 📋 ENDPOINTS PARA PACIENTES
 
 ### `GET /api/v1/pacientes`
