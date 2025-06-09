@@ -25,8 +25,7 @@ class turnosViewController {
 
     async crearTurno(req, res) {
         try {
-            const { fecha, hora, motivo, pacienteId } = req.body;
-
+            const { fecha, hora, pacienteId, motivo } = req.body;
             if (!fecha || !hora || !motivo || !pacienteId) {
                 throw new Error('Faltan datos obligatorios: fecha, hora, motivo y pacienteId');
             }

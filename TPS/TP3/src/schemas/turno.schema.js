@@ -12,7 +12,7 @@ const turnoSchema = {
         motivo: Joi.string().max(40).required().messages({
             'string.pattern.base': 'El motivo debe ser un string'
         }),
-        pacienteId: Joi.number().integer().positive().max(3).required()
+        pacienteId: Joi.number().integer().positive().required()
     }),
 }
 
