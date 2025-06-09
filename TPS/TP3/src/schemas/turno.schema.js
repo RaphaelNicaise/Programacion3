@@ -1,23 +1,28 @@
 const Joi = require('joi')
 
-const turnoSchema = {
-    create: Joi.object({
-        fecha: Joi.string().date().required().messages({
+class LoginController {
+  async login(req, res) {
+    const { password } = req.body;
 
-        }),
-        hora: Joi.string().pattern(/^([01]\d|2[0-3]):[0-5]\d$/).required().messages({
+      const { error } = LoginSchema.login.validate(req.body);
+      if (error) {
+        return res.status(400).json({ error: error.details[0].message });
+      }
 
-        }),
-        motivo: Joi.string().max(40).required().messages({
+    if (!password) {
+      return res.status(400).json({ error: 'La contraseña es obligatoria' });
+    }
+    if (password !== Config.loginPassword) {
+      return res.status(400).json({ error: 'Contraseña incorrecta' });
+    }
 
-        }),
-        pacienteId: Joi.number().integer().positive().max(3).required()
-    }),
+    const token = jwt.sign(
+      { role: 'admin' },
+      Config.secretWord,
+      { expiresIn: Config.expiresIn }
+    );
 
-    update: Joi.object({
-    }),
+    res.status(200).json({ token });
+  }
 }
-
-module.exports = { 
-    turnoSchema 
-}
+module.exports = new LoginController()

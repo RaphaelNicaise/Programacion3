@@ -1,9 +1,9 @@
 // routes/login.js
 const express = require('express');
 const router = express.Router();
-const loginController = require('../controllers/API/loginController.js');
+const LoginController = require('../controllers/API/login.controller.js');
 
-// Colocamos la contraseña del archivo .env
-router.post('/', loginController.login);
+// Colocamos la contraseña del archivo
+router.post('/', LoginController.login);
 
 module.exports = router;

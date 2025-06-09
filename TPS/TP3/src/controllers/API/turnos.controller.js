@@ -1,5 +1,6 @@
 const turnosModel = require('../../models/sqlite/turno.model.js');
 const pacientesModel = require('../../models/sqlite/paciente.model.js')
+const { turnoSchema } =require('../../schemas/turno.schema.js')
 class TurnosController {
 
   async getAllTurnos(req, res) {
@@ -36,6 +37,10 @@ class TurnosController {
 
   async crearTurno(req, res) {
     try {
+      const { error } = turnoSchema.create.validate(req.body);
+      if (error) {
+        return res.status(400).json({ error: error.details[0].message });
+      }
       const { fecha, hora, motivo, pacienteId } = req.body;
       const pacientes = await pacientesModel.getPacientesModel()
 
