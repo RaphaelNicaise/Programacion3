@@ -1,0 +1,9 @@
+.title {
+    color: #bda176;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    text-decoration: underline;
+}

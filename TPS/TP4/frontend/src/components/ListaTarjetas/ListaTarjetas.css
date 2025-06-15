@@ -1,0 +1,8 @@
+/* src/components/ListaTarjetas.css o src/index.css */
+.lista-tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+}

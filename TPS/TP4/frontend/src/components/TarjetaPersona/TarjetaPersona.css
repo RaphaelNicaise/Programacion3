@@ -1,0 +1,29 @@
+/* src/components/TarjetaPersona.css o src/index.css */
+.tarjeta-persona {
+  border: 1px solid #af7824;
+  border-bottom: 3px solid #e2d0b5;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #bda176;
+  width: 250px;
+}
+
+.tarjeta-persona h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.tarjeta-persona p {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.tarjeta-persona:hover {
+  background-color: #e2d0b5;
+  color: white;
+  transition: ease-in 0.1s;
+}
+
