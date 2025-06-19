@@ -21,7 +21,7 @@
     Para evitar problemas se debe cambiar el archivo .env.template a .env, o crear un archivo .env con los datos que se encuentran .env.template
 4. **Correr el backend**
     ```
-    npm start &
+    npm start
 5. **PASO IMPORTANTE**
     Abrir otra consola
 6. **Volver a la carpeta raiz del proyecto (carpeta TP4, si ya se encuentra ignorar el paso)**
