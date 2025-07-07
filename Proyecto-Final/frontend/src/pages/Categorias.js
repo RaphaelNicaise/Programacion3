@@ -13,7 +13,7 @@ const Categorias = () => {
 
   // Query para obtener categorías
   const { data: categorias, isLoading, error } = useQuery('categorias',
-    () => categoriaService.getAll().then(res => res.data)
+    () => categoriaService.getAll().then(res => res.data.data)
   );
 
   // Mutación para crear categoría

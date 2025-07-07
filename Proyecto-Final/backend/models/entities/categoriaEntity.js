@@ -8,7 +8,11 @@ module.exports = (sequelize) => {
     }, {
         tableName: 'categorias',
         timestamps: true,
-        paranoid: true
+        paranoid: true,
+        underscored: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: 'deleted_at'
     });
 
     // Asociaciones

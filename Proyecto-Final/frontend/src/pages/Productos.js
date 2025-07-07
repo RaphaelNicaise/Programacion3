@@ -14,12 +14,12 @@ const Productos = () => {
 
   // Query para obtener productos
   const { data: productos, isLoading, error } = useQuery('productos',
-    () => productoService.getAll().then(res => res.data)
+    () => productoService.getAll().then(res => res.data.data)
   );
 
   // Query para obtener categorías
   const { data: categorias } = useQuery('categorias',
-    () => categoriaService.getAll().then(res => res.data)
+    () => categoriaService.getAll().then(res => res.data.data)
   );
 
   // Mutación para crear producto

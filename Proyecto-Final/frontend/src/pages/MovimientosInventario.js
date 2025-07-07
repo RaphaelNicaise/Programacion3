@@ -13,18 +13,18 @@ const MovimientosInventario = () => {
 
   // Query para obtener movimientos
   const { data: movimientos, isLoading, error } = useQuery('movimientos',
-    () => movimientoService.getAll().then(res => res.data)
+    () => movimientoService.getAll().then(res => res.data.data)
   );
 
   // Query para obtener productos
   const { data: productos } = useQuery('productos',
-    () => productoService.getAll().then(res => res.data)
+    () => productoService.getAll().then(res => res.data.data)
   );
 
   // Query para obtener movimientos por producto
   const { data: movimientosByProducto } = useQuery(
     ['movimientos-producto', selectedProducto],
-    () => selectedProducto ? movimientoService.getByProducto(selectedProducto).then(res => res.data) : null,
+    () => selectedProducto ? movimientoService.getByProducto(selectedProducto).then(res => res.data.data) : null,
     { enabled: !!selectedProducto }
   );
 

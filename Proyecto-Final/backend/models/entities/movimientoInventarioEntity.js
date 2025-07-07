@@ -40,6 +40,9 @@ module.exports = (sequelize) => {
         tableName: 'movimientos_inventario',
         timestamps: true,
         paranoid: false, // No necesitamos soft delete para movimientos
+        underscored: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
         indexes: [
             {
                 fields: ['producto_id']
