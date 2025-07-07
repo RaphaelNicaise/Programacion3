@@ -68,7 +68,8 @@ const Productos = () => {
     const formattedData = {
       ...data,
       precio: parseFloat(data.precio),
-      stock: parseInt(data.stock),
+      stock_actual: parseInt(data.stock_actual),
+      stock_minimo: parseInt(data.stock_minimo),
       categoria_id: parseInt(data.categoria_id)
     };
 
@@ -84,7 +85,8 @@ const Productos = () => {
     setValue('nombre', producto.nombre);
     setValue('descripcion', producto.descripcion);
     setValue('precio', producto.precio);
-    setValue('stock', producto.stock);
+    setValue('stock_actual', producto.stock_actual);
+    setValue('stock_minimo', producto.stock_minimo);
     setValue('categoria_id', producto.categoria_id);
     setShowForm(true);
   };
@@ -204,18 +206,33 @@ const Productos = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="stock">Stock *</label>
+                <label htmlFor="stock_actual">Stock Actual *</label>
                 <input
-                  id="stock"
+                  id="stock_actual"
                   type="number"
                   min="0"
-                  {...register('stock', {
-                    required: 'El stock es requerido',
+                  {...register('stock_actual', {
+                    required: 'El stock actual es requerido',
                     min: { value: 0, message: 'El stock debe ser mayor o igual a 0' }
                   })}
-                  className={errors.stock ? 'error' : ''}
+                  className={errors.stock_actual ? 'error' : ''}
                 />
-                {errors.stock && <span className="error-text">{errors.stock.message}</span>}
+                {errors.stock_actual && <span className="error-text">{errors.stock_actual.message}</span>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="stock_minimo">Stock Mínimo *</label>
+                <input
+                  id="stock_minimo"
+                  type="number"
+                  min="0"
+                  {...register('stock_minimo', {
+                    required: 'El stock mínimo es requerido',
+                    min: { value: 0, message: 'El stock mínimo debe ser mayor o igual a 0' }
+                  })}
+                  className={errors.stock_minimo ? 'error' : ''}
+                />
+                {errors.stock_minimo && <span className="error-text">{errors.stock_minimo.message}</span>}
               </div>
             </div>
 
@@ -241,7 +258,8 @@ const Productos = () => {
               <th>Nombre</th>
               <th>Categoría</th>
               <th>Precio</th>
-              <th>Stock</th>
+              <th>Stock Actual</th>
+              <th>Stock Mínimo</th>
               <th>Descripción</th>
               <th>Acciones</th>
             </tr>
@@ -251,9 +269,10 @@ const Productos = () => {
               <tr key={producto.id}>
                 <td>{producto.id}</td>
                 <td>{producto.nombre}</td>
-                <td>{producto.Categoria?.nombre || 'Sin categoría'}</td>
+                <td>{producto.categoria?.nombre || 'Sin categoría'}</td>
                 <td>${Number(producto.precio).toFixed(2)}</td>
-                <td>{producto.stock}</td>
+                <td>{producto.stock_actual}</td>
+                <td>{producto.stock_minimo}</td>
                 <td>{producto.descripcion || 'Sin descripción'}</td>
                 <td>
                   <div className="action-buttons">

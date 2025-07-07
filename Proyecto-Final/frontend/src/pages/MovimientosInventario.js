@@ -199,23 +199,23 @@ const MovimientosInventario = () => {
               <th>Cantidad</th>
               <th>Motivo</th>
               <th>Fecha</th>
-              <th>Observaciones</th>
+              <th>Detalle</th>
             </tr>
           </thead>
           <tbody>
             {displayMovimientos?.map((movimiento) => (
               <tr key={movimiento.id}>
                 <td>{movimiento.id}</td>
-                <td>{movimiento.Producto?.nombre || 'Producto no encontrado'}</td>
+                <td>{movimiento.producto?.nombre || 'Producto no encontrado'}</td>
                 <td>
                   <span className={`badge ${movimiento.tipo_movimiento === 'entrada' ? 'badge-success' : 'badge-danger'}`}>
                     {movimiento.tipo_movimiento === 'entrada' ? 'Entrada' : 'Salida'}
                   </span>
                 </td>
                 <td>{movimiento.cantidad}</td>
-                <td>{movimiento.motivo || 'Sin motivo'}</td>
-                <td>{new Date(movimiento.createdAt).toLocaleString()}</td>
-                <td>{movimiento.observaciones || 'Sin observaciones'}</td>
+                <td>Ajuste de inventario</td>
+                <td>{new Date(movimiento.fecha_movimiento).toLocaleString()}</td>
+                <td>Stock anterior: {movimiento.stock_anterior}, Stock nuevo: {movimiento.stock_nuevo}</td>
               </tr>
             ))}
           </tbody>

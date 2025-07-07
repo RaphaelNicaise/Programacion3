@@ -164,7 +164,7 @@ const Categorias = () => {
                 <td>{categoria.id}</td>
                 <td>{categoria.nombre}</td>
                 <td>{categoria.descripcion || 'Sin descripción'}</td>
-                <td>{new Date(categoria.createdAt).toLocaleDateString()}</td>
+                <td>{new Date(categoria.created_at).toLocaleDateString()}</td>
                 <td>
                   <div className="action-buttons">
                     <button
