@@ -9,10 +9,10 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 10000, // 10 segundos de timeout
+  timeout: 10000, //10 segundos de timeout
 });
 
-// Interceptor para manejo de errores con mejor logging
+//Interceptor para manejo de errores con mejor logging
 api.interceptors.response.use(
   (response) => {
     console.log('✅ API Response:', response.config.url, response.status);
@@ -30,7 +30,7 @@ api.interceptors.response.use(
   }
 );
 
-// Servicios de Categorías
+//Servicios de Categorías
 export const categoriaService = {
   getAll: () => api.get('/categorias'),
   getById: (id) => api.get(`/categorias/${id}`),
@@ -39,7 +39,7 @@ export const categoriaService = {
   delete: (id) => api.delete(`/categorias/${id}`),
 };
 
-// Servicios de Productos
+//Servicios de Productos
 export const productoService = {
   getAll: () => api.get('/productos'),
   getById: (id) => api.get(`/productos/${id}`),
@@ -49,7 +49,7 @@ export const productoService = {
   delete: (id) => api.delete(`/productos/${id}`),
 };
 
-// Servicios de Movimientos de Inventario
+//Servicios de Movimientos de Inventario
 export const movimientoService = {
   getAll: () => api.get('/movimientos'),
   getById: (id) => api.get(`/movimientos/${id}`),
@@ -57,7 +57,7 @@ export const movimientoService = {
   create: (data) => api.post('/movimientos', data),
 };
 
-// Servicio de Health Check
+//Servicio de Health Check
 export const healthService = {
   check: () => api.get('/health'),
   test: () => api.get('/test'),

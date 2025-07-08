@@ -39,7 +39,7 @@ module.exports = (sequelize) => {
     }, {
         tableName: 'movimientos_inventario',
         timestamps: true,
-        paranoid: false, // No necesitamos soft delete para movimientos
+        paranoid: false,
         underscored: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -59,7 +59,7 @@ module.exports = (sequelize) => {
         ]
     });
 
-    // Asociaciones
+    //Asociaciones
     MovimientoInventario.associate = (models) => {
         MovimientoInventario.belongsTo(models.Producto, {
             foreignKey: 'producto_id',

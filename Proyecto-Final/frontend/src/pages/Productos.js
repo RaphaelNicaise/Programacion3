@@ -12,17 +12,17 @@ const Productos = () => {
 
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm();
 
-  // Query para obtener productos
+  //Query para obtener productos
   const { data: productos, isLoading, error } = useQuery('productos',
     () => productoService.getAll().then(res => res.data.data)
   );
 
-  // Query para obtener categorías
+  //Query para obtener categorías
   const { data: categorias } = useQuery('categorias',
     () => categoriaService.getAll().then(res => res.data.data)
   );
 
-  // Mutación para crear producto
+  //Mutación para crear producto
   const createMutation = useMutation(productoService.create, {
     onSuccess: () => {
       queryClient.invalidateQueries('productos');
@@ -35,7 +35,7 @@ const Productos = () => {
     }
   });
 
-  // Mutación para actualizar producto
+  //Mutación para actualizar producto
   const updateMutation = useMutation(
     ({ id, data }) => productoService.update(id, data),
     {
@@ -52,7 +52,7 @@ const Productos = () => {
     }
   );
 
-  // Mutación para eliminar producto
+  //Mutación para eliminar producto
   const deleteMutation = useMutation(productoService.delete, {
     onSuccess: () => {
       queryClient.invalidateQueries('productos');
@@ -64,7 +64,7 @@ const Productos = () => {
   });
 
   const onSubmit = (data) => {
-    // Convertir strings a números
+    //Convertir strings a números
     const formattedData = {
       ...data,
       precio: parseFloat(data.precio),
@@ -103,7 +103,7 @@ const Productos = () => {
     setShowForm(true);
   };
 
-  // Filtrar productos por búsqueda
+  //Filtrar productos por búsqueda
   const filteredProductos = productos?.filter(producto =>
     producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
     producto.descripcion?.toLowerCase().includes(searchTerm.toLowerCase())
@@ -121,7 +121,7 @@ const Productos = () => {
         </button>
       </div>
 
-      {/* Barra de búsqueda */}
+      {/*Barra de búsqueda*/}
       <div className="search-container">
         <input
           type="text"

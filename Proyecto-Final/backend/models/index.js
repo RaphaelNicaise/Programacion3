@@ -1,4 +1,3 @@
-// backend/models/index.js
 const { Sequelize } = require('sequelize');
 const config = require('../config/database');
 
@@ -19,17 +18,17 @@ const sequelize = new Sequelize(
   }
 );
 
-// Importar modelos
+//Importo entidades
 const CategoriaEntity = require('./entities/categoriaEntity');
 const ProductoEntity = require('./entities/productoEntity');
 const MovimientoInventarioEntity = require('./entities/movimientoInventarioEntity');
 
-// Inicializar modelos
+//Inicializo entities
 const Categoria = CategoriaEntity(sequelize);
 const Producto = ProductoEntity(sequelize);
 const MovimientoInventario = MovimientoInventarioEntity(sequelize);
 
-// Definir asociaciones
+//Defino las asociaciones entre tablas
 const models = { Categoria, Producto, MovimientoInventario };
 
 Object.keys(models).forEach(modelName => {

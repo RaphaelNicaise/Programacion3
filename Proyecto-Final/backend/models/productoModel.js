@@ -5,15 +5,15 @@ class ProductoModel {
     static async crear(datosProducto) {
         const { nombre, codigo, descripcion, precio, stock_actual, stock_minimo, categoria_id } = datosProducto;
 
-        // Validar que la categoría existe
+        //Validar que la categoría existe
         const categoria = await Categoria.findByPk(categoria_id);
         if (!categoria) throw new Error('La categoría especificada no existe');
 
-        // Validar que el código no existe
+        //Validar que el código no existe
         const existe = await Producto.findOne({ where: { codigo: codigo.trim() } });
         if (existe) throw new Error(`Ya existe un producto con el código: ${codigo}`);
 
-        // Validar precio y stock
+        //Validar precio y stock
         if (precio < 0) throw new Error('El precio no puede ser negativo');
         if (stock_actual < 0) throw new Error('El stock actual no puede ser negativo');
         if (stock_minimo < 0) throw new Error('El stock mínimo no puede ser negativo');
@@ -59,19 +59,19 @@ class ProductoModel {
         const producto = await Producto.findByPk(id);
         if (!producto) throw new Error('Producto no encontrado');
 
-        // Validar categoría si se está cambiando
+        //Validar categoría si se está cambiando
         if (datos.categoria_id && datos.categoria_id !== producto.categoria_id) {
             const categoria = await Categoria.findByPk(datos.categoria_id);
             if (!categoria) throw new Error('La categoría especificada no existe');
         }
 
-        // Validar código único si se está cambiando
+        //Validar código único si se está cambiando
         if (datos.codigo && datos.codigo !== producto.codigo) {
             const existe = await Producto.findOne({ where: { codigo: datos.codigo.trim().toUpperCase() } });
             if (existe && existe.id !== id) throw new Error(`Ya existe un producto con el código: ${datos.codigo}`);
         }
 
-        // Validaciones
+        //Validaciones
         if (datos.precio !== undefined && datos.precio < 0) {
             throw new Error('El precio no puede ser negativo');
         }

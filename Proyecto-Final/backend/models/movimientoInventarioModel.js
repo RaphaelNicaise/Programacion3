@@ -9,14 +9,14 @@ class MovimientoInventarioModel {
             cantidad
         } = datosMovimiento;
 
-        // Validar que el producto existe
+        //Validar que el producto existe
         const producto = await Producto.findByPk(producto_id);
         if (!producto) throw new Error('El producto especificado no existe');
 
-        // Validar cantidad
+        //Validar cantidad
         if (!cantidad || cantidad <= 0) throw new Error('La cantidad debe ser mayor a 0');
 
-        // Validar tipo de movimiento
+        //Validar tipo de movimiento
         const tiposPermitidos = ['entrada', 'salida', 'ajuste'];
         if (!tiposPermitidos.includes(tipo_movimiento)) {
             throw new Error(`Tipo de movimiento no válido. Permitidos: ${tiposPermitidos.join(', ')}`);
@@ -25,7 +25,7 @@ class MovimientoInventarioModel {
         const stockAnterior = producto.stock_actual;
         let stockNuevo;
 
-        // Calcular nuevo stock según tipo de movimiento
+        //Calcular nuevo stock según tipo de movimiento
         switch (tipo_movimiento) {
             case 'entrada':
                 stockNuevo = stockAnterior + parseInt(cantidad);
@@ -43,18 +43,18 @@ class MovimientoInventarioModel {
                 throw new Error('Tipo de movimiento no válido');
         }
 
-        // Validar que el stock nuevo no sea negativo
+        //Validar que el stock nuevo no sea negativo
         if (stockNuevo < 0) {
             throw new Error('El stock resultante no puede ser negativo');
         }
 
-        // Calcular valores monetarios
+        //Calcular valores monetarios
         const precioUnitario = producto.precio || 0;
         const valorTotal = Math.abs(cantidadMovimiento) * precioUnitario;
 
-        // Crear transacción para asegurar consistencia
+        //Crear transacción para asegurar consistencia
         const resultado = await MovimientoInventario.sequelize.transaction(async (transaction) => {
-            // Crear el movimiento
+            //Crear el movimiento
             const movimiento = await MovimientoInventario.create({
                 producto_id: parseInt(producto_id),
                 tipo_movimiento,
@@ -68,7 +68,7 @@ class MovimientoInventarioModel {
                 fecha_movimiento: new Date()
             }, { transaction });
 
-            // Actualizar el stock del producto
+            //Actualizar el stock del producto
             await producto.update({
                 stock_actual: stockNuevo
             }, { transaction });

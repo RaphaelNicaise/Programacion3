@@ -11,12 +11,12 @@ const Categorias = () => {
 
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm();
 
-  // Query para obtener categorías
+  //Query para obtener categorías
   const { data: categorias, isLoading, error } = useQuery('categorias',
     () => categoriaService.getAll().then(res => res.data.data)
   );
 
-  // Mutación para crear categoría
+  //Mutación para crear categoría
   const createMutation = useMutation(categoriaService.create, {
     onSuccess: () => {
       queryClient.invalidateQueries('categorias');
@@ -29,7 +29,7 @@ const Categorias = () => {
     }
   });
 
-  // Mutación para actualizar categoría
+  //Mutación para actualizar categoría
   const updateMutation = useMutation(
     ({ id, data }) => categoriaService.update(id, data),
     {
@@ -46,7 +46,7 @@ const Categorias = () => {
     }
   );
 
-  // Mutación para eliminar categoría
+  //Mutación para eliminar categoría
   const deleteMutation = useMutation(categoriaService.delete, {
     onSuccess: () => {
       queryClient.invalidateQueries('categorias');

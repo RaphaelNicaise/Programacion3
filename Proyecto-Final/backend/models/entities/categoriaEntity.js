@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
         deletedAt: 'deleted_at'
     });
 
-    // Asociaciones
+    //Asociaciones
     Categoria.associate = (models) => {
         Categoria.hasMany(models.Producto, {
             foreignKey: 'categoria_id',

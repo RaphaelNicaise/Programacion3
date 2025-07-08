@@ -11,24 +11,24 @@ const MovimientosInventario = () => {
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  // Query para obtener movimientos
+  //Query para obtener movimientos
   const { data: movimientos, isLoading, error } = useQuery('movimientos',
     () => movimientoService.getAll().then(res => res.data.data)
   );
 
-  // Query para obtener productos
+  //Query para obtener productos
   const { data: productos } = useQuery('productos',
     () => productoService.getAll().then(res => res.data.data)
   );
 
-  // Query para obtener movimientos por producto
+  //Query para obtener movimientos por producto
   const { data: movimientosByProducto } = useQuery(
     ['movimientos-producto', selectedProducto],
     () => selectedProducto ? movimientoService.getByProducto(selectedProducto).then(res => res.data.data) : null,
     { enabled: !!selectedProducto }
   );
 
-  // Mutación para crear movimiento
+  //Mutación para crear movimiento
   const createMutation = useMutation(movimientoService.create, {
     onSuccess: () => {
       queryClient.invalidateQueries('movimientos');
@@ -57,7 +57,7 @@ const MovimientosInventario = () => {
     setShowForm(true);
   };
 
-  // Movimientos filtrados
+  //Movimientos filtrados
   const displayMovimientos = selectedProducto ? movimientosByProducto : movimientos;
 
   if (isLoading) return <div className="loading">Cargando movimientos...</div>;
@@ -72,7 +72,7 @@ const MovimientosInventario = () => {
         </button>
       </div>
 
-      {/* Filtro por producto */}
+      {/*Filtro por producto*/}
       <div className="filter-container">
         <div className="form-group">
           <label htmlFor="producto-filter">Filtrar por producto:</label>

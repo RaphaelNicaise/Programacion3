@@ -70,7 +70,7 @@ module.exports = (sequelize) => {
         ]
     });
 
-    // Asociaciones
+    //Asociaciones
     Producto.associate = (models) => {
         Producto.belongsTo(models.Categoria, {
             foreignKey: 'categoria_id',

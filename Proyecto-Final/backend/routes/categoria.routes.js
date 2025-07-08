@@ -2,7 +2,7 @@ const { Router } = require('express');
 const categoriaController = require('../controllers/categoriaController.js');
 const router = Router();
 
-// Rutas para categorías
+//Rutas
 router.get('/', categoriaController.getCategorias);
 router.get('/:id', categoriaController.getCategoria);
 router.post('/', categoriaController.createCategoria);

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Importar rutas específicas
+//Importar rutas específicas
 const categoriaRoutes = require('./categoria.routes.js');
 const productoRoutes = require('./producto.routes.js');
 const movimientoInventarioRoutes = require('./movimientoInventario.routes.js');
@@ -28,7 +28,7 @@ router.get('/test', (req, res) => {
   });
 });
 
-// Rutas de la API
+//Rutas de la API
 router.use('/categorias', categoriaRoutes);
 router.use('/productos', productoRoutes);
 router.use('/movimientos', movimientoInventarioRoutes);

@@ -15,7 +15,7 @@ const Dashboard = () => {
       try {
         setLoading(true);
 
-        // Obtener estadísticas del API
+        //Obtener estadísticas dl API
         const [productosRes, categoriasRes, movimientosRes] = await Promise.all([
           fetch('http://localhost:3001/api/productos'),
           fetch('http://localhost:3001/api/categorias'),
@@ -26,7 +26,7 @@ const Dashboard = () => {
         const categorias = await categoriasRes.json();
         const movimientos = await movimientosRes.json();
 
-        // Calcular productos bajo stock
+        //Calcular productos bajo stock
         const productosBajoStock = productos.filter(producto =>
           producto.stock_actual <= producto.stock_minimo
         ).length;
