@@ -1,9 +1,18 @@
+// backend/models/index.js
 const { Sequelize } = require('sequelize');
 const config = require('../config/database');
 
 const env = process.env.NODE_ENV || 'development';
 const dbConfig = config[env];
 
+
+// Importar modelos
+const productoModel = require('../models/producto.model')
+const categoriaModel = require('./categoria.model.js')
+const movimientoModel = require('./movimiento.model.js')
+const userModel = require('./user.model.js')
+
+// Conexión a la base de datos
 const sequelize = new Sequelize(
   dbConfig.database,
   dbConfig.username,
@@ -18,29 +27,33 @@ const sequelize = new Sequelize(
   }
 );
 
-//Importo entidades
-const CategoriaEntity = require('./entities/categoriaEntity');
-const ProductoEntity = require('./entities/productoEntity');
-const MovimientoInventarioEntity = require('./entities/movimientoInventarioEntity');
 
-//Inicializo entities
-const Categoria = CategoriaEntity(sequelize);
-const Producto = ProductoEntity(sequelize);
-const MovimientoInventario = MovimientoInventarioEntity(sequelize);
+// Inicializar modelos
+const Producto = productoModel(sequelize);
+const Categoria = categoriaModel(sequelize);
+const Movimiento = movimientoModel(sequelize);
+const User = userModel(sequelize)
 
-//Defino las asociaciones entre tablas
-const models = { Categoria, Producto, MovimientoInventario };
+// Relaciones entre tablas
+User.hasMany(Producto, { foreignKey: 'idUsuario' });
+Producto.belongsTo(User, { foreignKey: 'idUsuario' });
 
-Object.keys(models).forEach(modelName => {
-  if (models[modelName].associate) {
-    models[modelName].associate(models);
-  }
-});
+//User.hasMany(Proveedor, { foreignKey: 'idUsuario' });
+//Proveedor.belongsTo(User, { foreignKey: 'idUsuario' });
+
+User.hasMany(Categoria, { foreignKey: 'idUsuario' });
+Categoria.belongsTo(User, { foreignKey: 'idUsuario' });
+
+Producto.hasMany(Movimiento, { foreignKey: 'idProducto' });
+Movimiento.belongsTo(Producto, { foreignKey: 'idProducto' });
+
 
 module.exports = {
   sequelize,
   Sequelize,
-  Categoria,
   Producto,
-  MovimientoInventario
+  Categoria,
+  Movimiento,
+  User
 };
+

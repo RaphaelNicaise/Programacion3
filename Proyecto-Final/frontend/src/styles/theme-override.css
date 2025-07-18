@@ -1,0 +1,235 @@
+
+/* Variables de tema */
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --bg-secondary: #f8f9fa;
+  --border-color: #e9ecef;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --accent-color: #007bff;
+  --hover-color: #f1f3f4;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e4e4e4;
+  --bg-secondary: #2d2d2d;
+  --border-color: #404040;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --accent-color: #4dabf7;
+  --hover-color: #353535;
+}
+
+/* SOLO elementos principales de layout */
+html[data-theme] body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+html[data-theme] #root {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Elementos de texto generales */
+html[data-theme] p,
+html[data-theme] h1,
+html[data-theme] h2,
+html[data-theme] h3,
+html[data-theme] h4,
+html[data-theme] h5,
+html[data-theme] h6,
+html[data-theme] span,
+html[data-theme] div:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  color: var(--text-color) !important;
+}
+
+/* Contenedores principales */
+html[data-theme] .container,
+html[data-theme] .main-content,
+html[data-theme] .page-wrapper,
+html[data-theme] .content,
+html[data-theme] .wrapper {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* DIVS MÁS AGRESIVOS - Captura la mayoría de contenedores */
+html[data-theme] div:not([class*="btn"]):not([class*="color"]):not([class*="primary"]):not([class*="success"]):not([class*="danger"]):not([class*="warning"]):not([class*="info"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] section:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] article:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] aside:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] header:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] footer:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] main:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] nav:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* TABLAS Y CONTENIDO DE TABLAS - MUY AGRESIVO */
+html[data-theme] table:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+html[data-theme] thead:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] tbody:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] tfoot:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+}
+
+html[data-theme] tr:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+html[data-theme] td:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] th:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* TODO dentro de tablas también debe cambiar */
+html[data-theme] table div:not([class*="btn"]):not([class*="color"]):not([class*="primary"]):not([class*="success"]):not([class*="danger"]):not([class*="warning"]):not([class*="info"]),
+html[data-theme] table span:not([class*="color"]),
+html[data-theme] table p:not([class*="color"]),
+html[data-theme] td div:not([class*="btn"]):not([class*="color"]):not([class*="primary"]):not([class*="success"]):not([class*="danger"]):not([class*="warning"]):not([class*="info"]),
+html[data-theme] th div:not([class*="btn"]):not([class*="color"]):not([class*="primary"]):not([class*="success"]):not([class*="danger"]):not([class*="warning"]):not([class*="info"]) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Contenedores con fondo secundario (cajas, panels, etc.) */
+html[data-theme] div[class*="box"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="panel"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="card"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="widget"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="item"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="block"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="section"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="row"]:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] div[class*="col"]:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Formularios */
+html[data-theme] input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+html[data-theme] textarea,
+html[data-theme] select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Cards y paneles tradicionales */
+html[data-theme] .card,
+html[data-theme] .panel,
+html[data-theme] .box,
+html[data-theme] .section {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Regla de emergencia para divs que se escapan */
+html[data-theme] div[style*="background-color: white"],
+html[data-theme] div[style*="background-color: #ffffff"],
+html[data-theme] div[style*="background-color: #fff"],
+html[data-theme] div[style*="background-color:white"],
+html[data-theme] div[style*="background-color:#ffffff"],
+html[data-theme] div[style*="background-color:#fff"],
+html[data-theme] div[style*="background: white"],
+html[data-theme] div[style*="background: #ffffff"],
+html[data-theme] div[style*="background: #fff"],
+html[data-theme] div[style*="background:white"],
+html[data-theme] div[style*="background:#ffffff"],
+html[data-theme] div[style*="background:#fff"] {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+}
+
+/* Regla específica para elementos comunes que se escapan */
+html[data-theme] div:not([class*="btn"]):not([class*="color"]):not([class*="primary"]):not([class*="success"]):not([class*="danger"]):not([class*="warning"]):not([class*="info"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] span:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] p:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] li:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] ul:not([class*="color"]):not([style*="color"]):not([style*="background"]),
+html[data-theme] ol:not([class*="color"]):not([style*="color"]):not([style*="background"]) {
+  background-color: inherit !important;
+  color: var(--text-color) !important;
+}
+
+/* Botón flotante de tema */
+.theme-toggle-floating {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  box-shadow: 0 4px 8px var(--shadow-color) !important;
+  transition: all 0.2s ease !important;
+  z-index: 9999 !important;
+}
+
+.theme-toggle-floating:hover {
+  transform: scale(1.1) !important;
+  background-color: var(--accent-color) !important;
+}
+
+/* EXCEPCIONES - Elementos que NO deben cambiar de color */
+html[data-theme] img,
+html[data-theme] svg,
+html[data-theme] video,
+html[data-theme] canvas {
+  background-color: transparent !important;
+}
+
+/* Botones con colores específicos (no cambiar) */
+html[data-theme] button[class*="btn-primary"],
+html[data-theme] button[class*="btn-success"],
+html[data-theme] button[class*="btn-danger"],
+html[data-theme] button[class*="btn-warning"],
+html[data-theme] button[class*="btn-info"],
+html[data-theme] .btn-primary,
+html[data-theme] .btn-success,
+html[data-theme] .btn-danger,
+html[data-theme] .btn-warning,
+html[data-theme] .btn-info {
+  background-color: revert !important;
+  color: revert !important;
+}
+
+/* Elementos con colores de estado/marca */
+html[data-theme] .text-success,
+html[data-theme] .text-danger,
+html[data-theme] .text-warning,
+html[data-theme] .text-info,
+html[data-theme] .text-primary,
+html[data-theme] .bg-success,
+html[data-theme] .bg-danger,
+html[data-theme] .bg-warning,
+html[data-theme] .bg-info,
+html[data-theme] .bg-primary {
+  color: revert !important;
+  background-color: revert !important;
+}
+
+/* Elementos con colores inline (no cambiar) - EXCEPTO blancos forzados */
+html[data-theme] [style*="color"]:not(body):not(#root):not([style*="background-color: white"]):not([style*="background-color: #ffffff"]):not([style*="background-color: #fff"]):not([style*="background: white"]):not([style*="background: #ffffff"]):not([style*="background: #fff"]),
+html[data-theme] [style*="background"]:not(body):not(#root):not([style*="background-color: white"]):not([style*="background-color: #ffffff"]):not([style*="background-color: #fff"]):not([style*="background: white"]):not([style*="background: #ffffff"]):not([style*="background: #fff"]) {
+  color: revert !important;
+  background-color: revert !important;
+}

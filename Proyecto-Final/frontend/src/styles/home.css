@@ -1,0 +1,66 @@
+.home-container {
+    /* Layout and Positioning */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if container has height */
+    margin: 80px auto; /* More vertical margin, center horizontally */
+    padding: 50px; /* Increased padding for more breathing room */
+    max-width: 500px; /* Increased max-width for a more substantial look */
+
+    /* Aesthetics */
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; /* Modern, clean font stack */
+    background-color: #ffffff; /* Pure white background */
+    border-radius: 12px; /* Softer, more modern rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Deeper, more noticeable shadow */
+    text-align: center; /* Ensure text remains centered */
+}
+
+.home-container h1 {
+    color: #2c3e50; /* Slightly darker, more refined text color */
+    font-size: 32px; /* Larger, more impactful heading */
+    margin-bottom: 40px; /* More space below the heading */
+    font-weight: 700; /* Bolder for emphasis */
+    letter-spacing: -0.5px; /* Slight letter spacing adjustment for better readability */
+}
+
+.home-container button {
+    width: 80%; /* Slightly less than 100% to give some internal margin */
+    max-width: 300px; /* Ensure buttons don't get too wide on larger containers */
+    padding: 15px 25px; /* Larger click area and more comfortable padding */
+    margin: 12px 0; /* More vertical spacing between buttons */
+    background-color: #007bff; /* Original blue */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Slightly more rounded buttons */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size for better readability */
+    font-weight: 600; /* Bold, but not too heavy */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Subtle shadow for buttons */
+}
+
+.home-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+}
+
+.home-container button:disabled {
+    background-color: #cccccc; /* Lighter gray for disabled state */
+    color: #999999; /* Faded text color */
+    cursor: not-allowed;
+    box-shadow: none; /* No shadow when disabled */
+    transform: none; /* No transform when disabled */
+}
+
+.home-container .logout-button {
+    background-color: #dc3545; /* Original red for logout */
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2); /* Red shadow for logout button */
+    margin-top: 30px; /* More space above the logout button */
+}
+
+.home-container .logout-button:hover {
+    background-color: #b02a37; /* Darker red on hover */
+    box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3); /* Enhanced red shadow on hover */
+}

@@ -1,8 +1,13 @@
+// VERSIÓN ORIGINAL DE ANTOSSI
+
 // config/config.js
 require('dotenv').config();
 
+const contra = "contra" //
+
 module.exports = {
   development: {
+    loginPassword: contra, //
     username: process.env.DB_USER || 'app_user',
     password: process.env.DB_PASSWORD || 'app_password',
     database: process.env.DB_NAME || 'app_database',
@@ -19,7 +24,8 @@ module.exports = {
   },
   test: {
     username: process.env.DB_USER || 'app_user',
-    password: process.env.DB_PASSWORD || 'app_password',
+    loginPassword: contra, //
+    //password: process.env.DB_PASSWORD || 'app_password',
     database: process.env.DB_NAME + '_test' || 'app_database_test',
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 5432,
@@ -28,7 +34,8 @@ module.exports = {
   },
   production: {
     username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    loginPassword: contra, //
+    //password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,

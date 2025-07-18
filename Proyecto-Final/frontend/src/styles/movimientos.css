@@ -1,0 +1,217 @@
+/* movimientos.css */
+
+#movimientos-container {
+    padding: 20px;
+}
+
+.movimientos-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.movimientos-loading-message,
+.movimientos-no-data-message {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.movimientos-error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.movimientos-button-container {
+    margin-bottom: 20px;
+}
+
+.movimientos-button-add,
+.movimientos-button-cancel {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.movimientos-button-add {
+    background-color: #007bff; /* Blue */
+}
+
+.movimientos-button-add:hover {
+    background-color: #0056b3;
+}
+
+.movimientos-button-cancel {
+    background-color: #dc3545; /* Red */
+}
+
+.movimientos-button-cancel:hover {
+    background-color: #c82333;
+}
+
+.movimientos-form-card {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movimientos-form-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.movimientos-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.movimientos-form-group {
+    margin-bottom: 10px;
+}
+
+.movimientos-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.movimientos-input,
+.movimientos-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.movimientos-textarea {
+    resize: vertical;
+}
+
+.movimientos-form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.movimientos-button-submit,
+.movimientos-button-submit-disabled,
+.movimientos-button-secondary {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.movimientos-button-submit {
+    background-color: #28a745; /* Green */
+}
+
+.movimientos-button-submit:hover {
+    background-color: #218838;
+}
+
+.movimientos-button-submit-disabled {
+    background-color: #6c757d; /* Grey */
+    cursor: not-allowed;
+}
+
+.movimientos-button-secondary {
+    background-color: #6c757d; /* Grey */
+}
+
+.movimientos-button-secondary:hover {
+    background-color: #5a6268;
+}
+
+.movimientos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movimientos-table-header-row {
+    background-color: #f8f9fa; /* Light grey */
+}
+
+.movimientos-table-header,
+.movimientos-table-data {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.movimientos-table-header {
+    font-weight: bold;
+    color: #333;
+}
+
+.movimientos-table-row:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+
+.movimientos-table-row:hover {
+    background-color: #e9ecef; /* Hover effect */
+}
+
+.movimientos-tipo-entrada {
+    color: green;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.movimientos-tipo-salida {
+    color: red;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.movimientos-tipo-ajuste {
+    color: orange;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.movimientos-tipo-default {
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.movimientos-observations-cell {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.movimientos-footer-button-container {
+    margin-top: 20px;
+}
+
+.movimientos-button-home {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Grey */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.movimientos-button-home:hover {
+    background-color: #5a6268;
+}

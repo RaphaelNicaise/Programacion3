@@ -39,7 +39,9 @@ services:
       DB_NAME: app_database
       DB_USER: app_user
       DB_PASSWORD: app_password
-      JWT_SECRET: your_jwt_secret_here
+      JWT_SECRET: palabra #${JWT_SECRET}
+      secretOrPrivateKey: palabra #
+      JWT_EXPIRES_IN: 1h
       CORS_ORIGIN: http://localhost:3000
     ports:
       - "3001:3001"

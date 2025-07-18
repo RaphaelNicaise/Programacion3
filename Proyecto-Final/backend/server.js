@@ -10,6 +10,18 @@ const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Crea tablas si no existen
+const syncDatabase = async () => {
+  try {
+    await sequelize.sync({ force: false }); 
+    console.log('Tablas sincronizadas correctamente');
+  } catch (error) {
+    console.error('Error al sincronizar:', error);
+  }
+};
+syncDatabase(); // Llamar antes de iniciar el servidor
+
+
 // Middleware de seguridad
 app.use(helmet());
 

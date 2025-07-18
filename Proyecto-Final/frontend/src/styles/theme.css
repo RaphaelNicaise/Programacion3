@@ -1,0 +1,96 @@
+/* Variables CSS para modo claro */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --bg-secondary: #f8f9fa;
+  --border-color: #e9ecef;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --accent-color: #007bff;
+  --hover-color: #f1f3f4;
+}
+
+/* Variables CSS para modo oscuro */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e4e4e4;
+  --bg-secondary: #2d2d2d;
+  --border-color: #404040;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --accent-color: #4dabf7;
+  --hover-color: #353535;
+}
+
+/* Aplicar variables a elementos base */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Clases utilitarias que puedes usar en tus componentes */
+.bg-primary {
+  background-color: var(--bg-color);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.text-primary {
+  color: var(--text-color);
+}
+
+.border-primary {
+  border-color: var(--border-color);
+}
+
+.shadow-primary {
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.hover-bg:hover {
+  background-color: var(--hover-color);
+}
+
+/* Ejemplo de estilos para botones */
+.btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Ejemplo de estilos para cards */
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Botón toggle para el tema */
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--hover-color);
+}

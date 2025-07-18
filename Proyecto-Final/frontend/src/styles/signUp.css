@@ -1,0 +1,95 @@
+/* Estilos para el contenedor principal de la página de registro */
+.register-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif; /* Usando la fuente Inter */
+}
+
+/* Estilos para la tarjeta o el formulario de registro */
+.register-card {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para el título del formulario */
+.register-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Estilos para los grupos de formulario (label + input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas de los campos del formulario */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para los campos de entrada de texto (input) */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+/* Estilos para el botón de enviar */
+.submit-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #28a745; /* Color de fondo verde */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilos para el botón cuando está deshabilitado (cargando) */
+.submit-button-loading {
+    background-color: #6c757d; /* Color de fondo gris */
+    cursor: not-allowed;
+}
+
+/* Estilos para el contenedor del enlace de inicio de sesión */
+.login-link-container {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+.login-link {
+    color: #007bff; /* Color de enlace azul */
+    text-decoration: none;
+}
+
+/* Estilos para el texto de información adicional */
+.info-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+    font-size: 12px;
+    line-height: 1.5;
+}

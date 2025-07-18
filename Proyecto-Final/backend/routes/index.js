@@ -1,10 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-//Importar rutas específicas
-const categoriaRoutes = require('./categoria.routes.js');
-const productoRoutes = require('./producto.routes.js');
-const movimientoInventarioRoutes = require('./movimientoInventario.routes.js');
+// Importo rutas
+const productoRoutes = require('./producto.routes');
+const loginRoutes = require('./login.routes');
+const categoriaRoutes = require('./categoria.routes.js')
+const movimientoRoutes = require('./movimientos.routes.js')
+
+// Derivo rutas
+router.use('/productos', productoRoutes);
+router.use('/login', loginRoutes);
+router.use('/categorias', categoriaRoutes);
+router.use('/movimientos', movimientoRoutes)
 
 // Ruta de prueba
 router.get('/health', (req, res) => {
@@ -27,10 +34,5 @@ router.get('/test', (req, res) => {
     }
   });
 });
-
-//Rutas de la API
-router.use('/categorias', categoriaRoutes);
-router.use('/productos', productoRoutes);
-router.use('/movimientos', movimientoInventarioRoutes);
 
 module.exports = router;
